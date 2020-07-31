@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Paging3</string>
+    <string name="poster">Poster</string>
+    <string name="movie_flow">Flow</string>
+    <string name="movie_flow_remote_mediator">Flow Mediator</string>
+    <string name="movie_rx">Rx</string>
+    <string name="movie_rx_remote_mediator">Rx Mediator</string>
+    <string name="error">Error</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="kotlin_flow_with_paging_source">Kotlin Flow with Paging Source</string>
+    <string name="kotlin_flow_with_remote_mediator">Kotlin Flow with Remote Mediator</string>
+    <string name="rx_with_paging_source">Rx with Paging Source</string>
+    <string name="rx_with_remote_mediator">Rx with Remote Mediator</string>
+
+
+</resources>

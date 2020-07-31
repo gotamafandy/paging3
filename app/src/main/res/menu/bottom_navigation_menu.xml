@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/movieFlowFragment"
+        android:title="@string/movie_flow" />
+
+    <item android:id="@+id/movieFlowRemoteFragment"
+        android:title="@string/movie_flow_remote_mediator" />
+
+    <item android:id="@+id/movieRxFragment"
+        android:title="@string/movie_rx" />
+
+    <item android:id="@+id/movieRxRemoteFragment"
+        android:title="@string/movie_rx_remote_mediator" />
+</menu>

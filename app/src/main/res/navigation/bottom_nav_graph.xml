@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/movieFlowFragment">
+
+    <fragment
+        android:id="@+id/movieFlowFragment"
+        android:name="com.adrena.commerce.paging3.view.MovieFlowFragment"
+        android:label="MovieFlowFragment" />
+
+    <fragment
+        android:id="@+id/movieRxFragment"
+        android:name="com.adrena.commerce.paging3.view.MovieRxFragment"
+        android:label="MovieRxFragment" />
+
+    <fragment
+        android:id="@+id/movieFlowRemoteFragment"
+        android:name="com.adrena.commerce.paging3.view.MovieFlowRemoteFragment"
+        android:label="MovieFlowRemoteFragment" />
+
+    <fragment
+        android:id="@+id/movieRxRemoteFragment"
+        android:name="com.adrena.commerce.paging3.view.MovieRxRemoteFragment"
+        android:label="MovieRxRemoteFragment" />
+
+</navigation>
