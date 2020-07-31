@@ -60,7 +60,9 @@ class MovieFlowRemoteFragment : Fragment() {
                 AlertDialog.Builder(view.context)
                     .setTitle(R.string.error)
                     .setMessage(it.error.localizedMessage)
-                    .setNegativeButton(R.string.cancel, null)
+                    .setNegativeButton(R.string.cancel) { dialog, _ ->
+                        dialog.dismiss()
+                    }
                     .setPositiveButton(R.string.retry) { _, _ ->
                         mAdapter.retry()
                     }

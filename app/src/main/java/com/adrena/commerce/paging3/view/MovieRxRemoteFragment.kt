@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import com.adrena.commerce.paging3.R
 import com.adrena.commerce.paging3.data.Injection
@@ -57,7 +56,9 @@ class MovieRxRemoteFragment : Fragment() {
                 AlertDialog.Builder(view.context)
                     .setTitle(R.string.error)
                     .setMessage(it.error.localizedMessage)
-                    .setNegativeButton(R.string.cancel, null)
+                    .setNegativeButton(R.string.cancel) { dialog, _ ->
+                        dialog.dismiss()
+                    }
                     .setPositiveButton(R.string.retry) { _, _ ->
                         mAdapter.retry()
                     }

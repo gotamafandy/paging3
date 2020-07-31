@@ -86,6 +86,7 @@ class GetMoviesRxRemoteMediator(
             database.movieRemoteKeysRxDao().insertAll(keys)
             database.moviesRxDao().insertAll(data.movies)
             database.setTransactionSuccessful()
+
         } finally {
             database.endTransaction()
         }
