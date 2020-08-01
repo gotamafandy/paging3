@@ -1,6 +1,5 @@
 package com.adrena.commerce.paging3.data.rx
 
-import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
@@ -37,7 +36,6 @@ class GetMoviesRxRemoteMediator(
                         remoteKeys?.nextKey?.minus(1) ?: 1
                     }
                     LoadType.PREPEND -> {
-                        Log.d("DUDIDAM", "PREPEND")
                         val remoteKeys = getRemoteKeyForFirstItem(state)
                             ?: throw InvalidObjectException("Result is empty")
 
