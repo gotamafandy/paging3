@@ -16,7 +16,7 @@ class GetMoviesFlowRemoteRepositoryImpl(
             config = PagingConfig(
                 pageSize = 20,
                 enablePlaceholders = true,
-                prefetchDistance = 2,
+                prefetchDistance = 5,
                 initialLoadSize = 40),
             remoteMediator = remoteMediator,
             pagingSourceFactory = { database.moviesFlowDao().selectAll() }

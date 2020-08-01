@@ -11,8 +11,8 @@ class GetMoviesRxRepositoryImpl(private val pagingSource: GetMoviesRxPagingSourc
             config = PagingConfig(
                 pageSize = 20,
                 enablePlaceholders = true,
-                maxSize = 24,
-                prefetchDistance = 2,
+                maxSize = 30,
+                prefetchDistance = 5,
                 initialLoadSize = 40),
             pagingSourceFactory = { pagingSource }
         )

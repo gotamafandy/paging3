@@ -13,7 +13,7 @@ class GetMoviesFlowRepositoryImpl(private val pagingSource: GetMoviesFlowPagingS
             config = PagingConfig(
                 pageSize = 20,
                 enablePlaceholders = true,
-                prefetchDistance = 2,
+                prefetchDistance = 5,
                 initialLoadSize = 40),
             pagingSourceFactory = { pagingSource }
         ).flow

@@ -10,7 +10,7 @@ class MoviesMapper {
             Movies(
                 total = total,
                 page = page,
-                movies = results.filter { it.posterPath != null }.map {
+                movies = results.map {
                     Movies.Movie(
                         0,
                         it.id,
