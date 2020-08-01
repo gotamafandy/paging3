@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import com.adrena.commerce.paging3.data.model.Movies
 import com.adrena.commerce.paging3.view.viewholder.MovieGridViewHolder
 
-class MoviesRxAdapter() : PagingDataAdapter<Movies.Movie, MovieGridViewHolder>(
+class MoviesRxAdapter : PagingDataAdapter<Movies.Movie, MovieGridViewHolder>(
     COMPARATOR
 ) {
 

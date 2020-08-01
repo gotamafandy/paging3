@@ -77,14 +77,6 @@ class MovieFlowRemoteFragment : Fragment() {
             }
         }
 
-        val database = Injection.provideDatabase(view.context)
-
-        mBinding.test.setOnClickListener {
-            lifecycleScope.launch {
-                database.moviesFlowDao().deleteMovie(683861)
-            }
-        }
-
         return view
     }
 }
