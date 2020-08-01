@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
 import com.adrena.commerce.paging3.R
@@ -16,7 +15,6 @@ import com.adrena.commerce.paging3.databinding.FragmentMovieListBinding
 import com.adrena.commerce.paging3.view.rx.MoviesRxAdapter
 import com.adrena.commerce.paging3.view.viewmodel.rx.GetMoviesRxViewModel
 import io.reactivex.disposables.CompositeDisposable
-import kotlinx.coroutines.launch
 
 class MovieRxRemoteFragment : Fragment() {
     private val mDisposable = CompositeDisposable()
@@ -66,11 +64,9 @@ class MovieRxRemoteFragment : Fragment() {
             }
         }
 
-        lifecycleScope.launch {
-            mDisposable.add(mViewModel.getFavoriteMovies().subscribe {
-                mAdapter.submitData(lifecycle, it)
-            })
-        }
+        mDisposable.add(mViewModel.getFavoriteMovies().subscribe {
+            mAdapter.submitData(lifecycle, it)
+        })
 
         return view
     }

@@ -13,10 +13,11 @@ class GetMoviesRxRemoteRepositoryImpl(
     override fun getMovies(): Pager<Int, Movies.Movie> {
         return Pager(
             config = PagingConfig(
-                pageSize = 10,
+                pageSize = 20,
                 enablePlaceholders = true,
+                maxSize = 24,
                 prefetchDistance = 2,
-                initialLoadSize = 20),
+                initialLoadSize = 40),
             remoteMediator = remoteMediator,
             pagingSourceFactory = { database.moviesRxDao().selectAll() }
         )

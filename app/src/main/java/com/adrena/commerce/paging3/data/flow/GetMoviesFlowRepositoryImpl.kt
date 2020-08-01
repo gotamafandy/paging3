@@ -11,10 +11,10 @@ class GetMoviesFlowRepositoryImpl(private val pagingSource: GetMoviesFlowPagingS
     override fun getMovies(): Flow<PagingData<Movies.Movie>> {
         return Pager(
             config = PagingConfig(
-                pageSize = 10,
+                pageSize = 20,
                 enablePlaceholders = true,
                 prefetchDistance = 2,
-                initialLoadSize = 20),
+                initialLoadSize = 40),
             pagingSourceFactory = { pagingSource }
         ).flow
     }
