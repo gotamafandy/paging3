@@ -2,11 +2,13 @@ package com.adrena.commerce.paging3.view.viewmodel.flow
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.paging.*
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
+import androidx.paging.insertSeparators
+import androidx.paging.map
 import com.adrena.commerce.paging3.data.flow.GetMoviesFlowRepository
 import com.adrena.commerce.paging3.view.model.UiModel
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.map
 
 class GetMoviesFlowViewModel(private val repository: GetMoviesFlowRepository) : ViewModel() {
