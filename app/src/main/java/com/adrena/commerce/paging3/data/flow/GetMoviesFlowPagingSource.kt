@@ -17,18 +17,19 @@ class GetMoviesFlowPagingSource(
         val position = params.key ?: 1
 
         return try {
-            val response = service.moviesFlow(
+            service.moviesFlow(
                 apiKey = apiKey,
                 language = locale.language,
-                page = position)
+                page = position
+            ).run {
+                val data = mapper.transform(this, locale)
 
-            val data = mapper.transform(response, locale)
-
-            LoadResult.Page(
-                data = data.movies,
-                prevKey = if (position == 1) null else position - 1,
-                nextKey = if (position == response.total) null else position + 1
-            )
+                LoadResult.Page(
+                    data = data.movies,
+                    prevKey = if (position == 1) null else position - 1,
+                    nextKey = if (position == this.total) null else position + 1
+                )
+            }
         } catch (e: Exception) {
             return LoadResult.Error(e)
         }

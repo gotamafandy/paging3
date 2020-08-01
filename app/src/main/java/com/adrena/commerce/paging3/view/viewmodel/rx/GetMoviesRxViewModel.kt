@@ -14,7 +14,6 @@ class GetMoviesRxViewModel(private val repository: GetMoviesRxRepository) : View
     fun getFavoriteMovies(): Flowable<PagingData<Movies.Movie>> {
         return repository
             .getMovies()
-            .flowable
             .map { pagingData -> pagingData.filter { it.poster != null } }
             .cachedIn(viewModelScope)
     }

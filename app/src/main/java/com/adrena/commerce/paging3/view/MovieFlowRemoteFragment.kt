@@ -2,6 +2,7 @@ package com.adrena.commerce.paging3.view
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -73,6 +74,14 @@ class MovieFlowRemoteFragment : Fragment() {
         lifecycleScope.launch {
             mViewModel.getFavoriteMovies().collectLatest {
                 mAdapter.submitData(it)
+            }
+        }
+
+        val database = Injection.provideDatabase(view.context)
+
+        mBinding.test.setOnClickListener {
+            lifecycleScope.launch {
+                database.moviesFlowDao().deleteMovie(683861)
             }
         }
 

@@ -18,4 +18,7 @@ interface MovieFlowDao {
 
     @Query("DELETE FROM movies")
     suspend fun clearMovies()
+
+    @Query("DELETE FROM movies where movieId = :movieId")
+    suspend fun deleteMovie(movieId: Int)
 }
