@@ -1,5 +1,6 @@
 package com.adrena.commerce.paging3.data.rx
 
+import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
@@ -13,6 +14,7 @@ class GetMoviesRxRemoteRepositoryImpl(
     private val remoteMediator: GetMoviesRxRemoteMediator
 ): GetMoviesRxRepository {
 
+    @OptIn(ExperimentalPagingApi::class)
     override fun getMovies(): Flowable<PagingData<Movies.Movie>> {
         return Pager(
             config = PagingConfig(
