@@ -13,7 +13,7 @@ import com.adrena.commerce.paging3.data.model.Movies
 
 @Database(
     entities = [Movies.Movie::class, Movies.MovieRemoteKeys::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(Converters::class)

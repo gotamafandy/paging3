@@ -19,7 +19,7 @@ import java.util.*
 
 object Injection {
     fun provideLocale(): Locale = Locale.getDefault()
-    fun provideDatabase(context: Context): MovieDatabase = MovieDatabase.getInstance(context)
+    private fun provideDatabase(context: Context): MovieDatabase = MovieDatabase.getInstance(context)
 
     fun provideFlowViewModel(context: Context): ViewModelProvider.Factory {
         val pagingSource =

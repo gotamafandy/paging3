@@ -3,7 +3,7 @@ package com.adrena.commerce.paging3.view.viewholder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import coil.api.load
+import coil.load
 import com.adrena.commerce.paging3.R
 import com.adrena.commerce.paging3.data.model.Movies
 import com.adrena.commerce.paging3.databinding.MovieGridItemBinding
